@@ -126,7 +126,7 @@
         ['OS=="mac"',
           {
             'xcode_settings': {
-              'OTHER_CFLAGS': ['-O3'],
+              'OTHER_CFLAGS': ['-O3', '-Wno-return-type'],
             },
             'include_dirs': [
               '<(javahome)/include',
