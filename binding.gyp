@@ -41,7 +41,10 @@
         '<(javahome)/include',
         "<!(node -e \"require('nan')\")",
       ],
-      'cflags': ['-O3'],
+      'cflags': [
+        '-O3',
+        '-Wno-return-type'
+       ],
       'conditions': [
         ['OS=="win"',
           {
