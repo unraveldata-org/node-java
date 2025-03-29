@@ -41,7 +41,10 @@
         '<(javahome)/include',
         "<!(node -e \"require('nan')\")",
       ],
-      'cflags': ['-O3'],
+      'cflags': [
+        '-O3',
+        '-Wno-return-type'
+       ],
       'conditions': [
         ['OS=="win"',
           {
@@ -123,7 +126,7 @@
         ['OS=="mac"',
           {
             'xcode_settings': {
-              'OTHER_CFLAGS': ['-O3'],
+              'OTHER_CFLAGS': ['-O3', '-Wno-return-type'],
             },
             'include_dirs': [
               '<(javahome)/include',
